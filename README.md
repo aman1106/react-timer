@@ -6,11 +6,11 @@ Simple timer with adjustable time and alert when timer ends and stopwatch with l
 
 #### Timer
 
-[![timer.png](https://i.postimg.cc/Jn8TNVfx/timer.png)](https://postimg.cc/v1PLyjHx)
+[![timer.png](https://i.postimg.cc/25p6xrCP/timer.png)](https://postimg.cc/21wrkpbw)
 
 #### Stopwatch
 
-[![stopwatch.png](https://i.postimg.cc/x1Hytpy4/stopwatch.png)](https://postimg.cc/G4LypQfF)
+[![stopwatch.png](https://i.postimg.cc/15259sVf/stopwatch.png)](https://postimg.cc/D8QK6VgT)
 
 ### Set Up
 
