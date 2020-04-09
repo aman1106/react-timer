@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Card, Tabs } from "antd";
 import Timer from "./Timer";
 import Stopwatch from "./Stopwatch";
-import Auxiliary from "../util/Auxiliary";
+import Auxiliary from "../../util/Auxiliary";
 import { ClockCircleOutlined, HourglassOutlined, GithubOutlined } from '@ant-design/icons';
 
 const TabPane = Tabs.TabPane;

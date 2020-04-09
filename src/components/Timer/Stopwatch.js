@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Button} from "antd";
-import Auxiliary from "../util/Auxiliary";
+import Auxiliary from "../../util/Auxiliary";
 import moment from 'moment';
 
 let running;
@@ -14,8 +14,8 @@ class Stopwatch extends Component {
 
   changeStopwatch = () => {
     if(this.state.stop) {
-        clearInterval(running);
-        this.setState({...this.state, stop: false});
+      clearInterval(running);
+      this.setState({...this.state, stop: false});
     } else {
       running = setInterval(() => {
         this.setState({...this.state, time: this.state.time+1, stop: true});
@@ -41,7 +41,7 @@ class Stopwatch extends Component {
         {this.state.laps.map((lap, index) => (
           <div>
             <h2>
-            Lap {index+1}: {moment.utc(lap*1000).format((lap*1000) < 60000 ? "ss[s]" : (lap*1000) < 3600000 ? "mm[m] ss[s]" : "HH[h] mm[m] ss[s]")}
+              Lap {index+1}: {moment.utc(lap*1000).format((lap*1000) < 60000 ? "ss[s]" : (lap*1000) < 3600000 ? "mm[m] ss[s]" : "HH[h] mm[m] ss[s]")}
             </h2>
           </div>
         ))}

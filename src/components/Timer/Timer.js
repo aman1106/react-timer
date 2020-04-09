@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Button, TimePicker} from "antd";
-import Auxiliary from "../util/Auxiliary";
+import Auxiliary from "../../util/Auxiliary";
 import Sound from "react-sound";
-import soundfile from "../alert.mp3";
+import soundfile from "../../alert.mp3";
 import moment from 'moment';
 
 let running;
@@ -51,17 +51,18 @@ class Timer extends Component {
     this.setState({...this.state, time: 3600, loading: true},() => {
       if(this.state.start)
         this.runTimer();
-      this.setState({...this.state, loading: false})
+      this.setState({...this.state, loading: false});
     })
   }
 
   render() {
     return(
       <Auxiliary>
-      {this.state.time === 0 ? <Sound url={soundfile} playStatus={Sound.status.PLAYING}/> : null}
-      {this.state.loading ? "Please Wait..." :
-          <TimePicker className="gx-mb-4" placeholder="Set Timer" onChange={this.setTimer} defaultValue={moment('01:00:00', 'HH:mm:ss')}/>}
-        <h1>{moment.utc(this.state.time*1000).format("HH[h] mm[m] ss[s]")}</h1>
+        {this.state.time === 0 ? <Sound url={soundfile} playStatus={Sound.status.PLAYING}/> : null}
+        {this.state.loading ? "Please Wait..." : <TimePicker className="gx-mb-4" placeholder="Set Timer" onChange={this.setTimer} defaultValue={moment('01:00:00', 'HH:mm:ss')}/>}
+        <h1>
+          {moment.utc(this.state.time*1000).format("HH[h] mm[m] ss[s]")}
+        </h1>
         <Button className="start-button" type="primary" onClick={this.changeTimer}>{this.state.start ? "Stop" : "Start" }</Button>
         <Button onClick={this.reset}>RESET</Button>
       </Auxiliary>

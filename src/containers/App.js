@@ -1,7 +1,7 @@
 import React from 'react';
-import HrTimer from "./Timer/index";
+import HrTimer from "../components/Timer/index";
 import './App.css';
-import '../node_modules/antd/dist/antd.css';
+import '../../node_modules/antd/dist/antd.css';
 
 function App() {
   return (
